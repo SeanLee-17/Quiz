@@ -7,7 +7,7 @@ function countdown() {
         } else {
             timeEl.textContent = " "
         }
-    })
+    }, 1000);
 }
 
 var question1 = document.getElementById("question1");

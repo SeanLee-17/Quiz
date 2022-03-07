@@ -1,0 +1,21 @@
+:root {
+--dark: rgb(29, 65, 29);
+--light: rgb(156, 248, 156);
+}
+
+header {
+    background-color: var(--light);
+    height: 35px;
+    margin: auto;
+    padding: 30px;
+}
+
+header h2 {
+    text-align: right;
+}
+
+a {
+    color: var(--dark);
+    font-size: 20px;
+    
+}
