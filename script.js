@@ -10,12 +10,39 @@ function countdown() {
     }, 1000);
 }
 
-var question1 = document.getElementById("question1");
+function displayQuestion(count) {
+    if (count === 1) {
+        var question1 = document.getElementById("question1");
+        var answer1 = document.getElementById("answer1");
+        question1.textContent = "What does API stand for?"
+        var answerBtn = document.createElement("button")
+        answerBtn.setAttribute("data-answer","Application Programming Interface")
+        answerBtn.textContent = "Application Programming Interface"
+        answer1.appendChild(answerBtn)
+        console.log(answerBtn)
+
+    } else if (count === 2) {
+        var question1 = document.getElementById("question1");
+        var answer1 = document.getElementById("answer1");
+        answer1.textContent = " ";
+        question1.textContent = "What does API stand?";
+        var answerBtn = document.createElement("button")
+        answerBtn.setAttribute("data-answer","Application Programming Interface")
+        answerBtn.textContent = "Application Programming Interface"
+        answer1.appendChild(answerBtn)
+        console.log(answerBtn)
+
+    } 
+}
+var questionCount = 1;
+
+displayQuestion(questionCount)
+
 var question2 = document.getElementById("question2");
 var question3 = document.getElementById("question3");
 var question4 = document.getElementById("quesiton4");
 var quesiton5 = document.getElementById("question5");
-var answer1 = document.getElementById("answer1")
+
 var answer2 = document.getElementById("answer2")
 var answer3 = document.getElementById("answer3")
 var answer4 = document.getElementById("answer4")
@@ -31,4 +58,14 @@ var wrong44 = document.getElementById("wrong44")
 var wrong5 = document.getElementById("wrong5")
 var wrong55 = document.getElementById("wrong55")
 
-question1.textContent = "What does API stand for?"
+
+
+answer1.addEventListener("click",function(event){
+    if (event.target.matches("button")) {
+        var userGuess = event.target.getAttribute("data-answer");
+        console.log(userGuess);
+        //add logic for correct answer
+        questionCount++;
+        displayQuestion(questionCount)
+    }
+})
