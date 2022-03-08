@@ -137,8 +137,11 @@ function displayQuestion(count) {
         wrong2.appendChild(wrong2Btn)
     } 
 }
+var verdict = document.getElementById("verdict")
+
 var questionCount = 1;
 var answers = ["Application Program Interface","CSS","Charles Babbage","Document Object Model","period"]
+
 displayQuestion(questionCount)
 
 answer1.addEventListener("click",function(event){
@@ -146,10 +149,126 @@ answer1.addEventListener("click",function(event){
         var userGuess = event.target.getAttribute("data-answer");
         console.log(userGuess);
         function correct() {
-
-        }
+            if (questionCount === 1) {
+                if (userGuess === answers[0]) {
+                    verdict.textContent= "Correct!"
+                } else {
+                    verdict.textContent= "Wrong!"
+                }
+            } else if (questionCount === 2) {
+                if (userGuess === answers[1]) {
+                    verdict.textContent= "Correct!"
+                } else {
+                    verdict.textContent= "Wrong!"
+                }
+            } else if (questionCount === 3) {
+                if (userGuess === answers[2]) {
+                    verdict.textContent= "Correct!"
+                } else {
+                    verdict.textContent= "Wrong!"
+                }
+            } else if (questionCount === 4) {
+                if (userGuess === answers[3]) {
+                    verdict.textContent= "Correct!"
+                } else {
+                    verdict.textContent= "Wrong!"
+                }
+            } else if (questionCount === 5) {
+                if (userGuess === answers[4]) {
+                    verdict.textContent= "Correct!"
+                } else {
+                    verdict.textContent= "Wrong!"
+                }
+            }
+        };
+        correct();
         questionCount++;
         displayQuestion(questionCount)
     } 
 })
 
+wrong1.addEventListener("click",function(event){
+    if (event.target.matches("button")) {
+        var userGuess = event.target.getAttribute("data-wrong1");
+        console.log(userGuess);
+        function correct() {
+            if (questionCount === 1) {
+                if (userGuess === answers[0]) {
+                    verdict.textContent= "Correct!"
+                } else {
+                    verdict.textContent= "Wrong!"
+                }
+            } else if (questionCount === 2) {
+                if (userGuess === answers[1]) {
+                    verdict.textContent= "Correct!"
+                } else {
+                    verdict.textContent= "Wrong!"
+                }
+            } else if (questionCount === 3) {
+                if (userGuess === answers[2]) {
+                    verdict.textContent= "Correct!"
+                } else {
+                    verdict.textContent= "Wrong!"
+                }
+            } else if (questionCount === 4) {
+                if (userGuess === answers[3]) {
+                    verdict.textContent= "Correct!"
+                } else {
+                    verdict.textContent= "Wrong!"
+                }
+            } else if (questionCount === 5) {
+                if (userGuess === answers[4]) {
+                    verdict.textContent= "Correct!"
+                } else {
+                    verdict.textContent= "Wrong!"
+                }
+            }
+        };
+        correct();
+        questionCount++;
+        displayQuestion(questionCount)
+    } 
+})
+
+wrong2.addEventListener("click",function(event){
+    if (event.target.matches("button")) {
+        var userGuess = event.target.getAttribute("data-wrong2");
+        console.log(userGuess);
+        function correct() {
+            if (questionCount === 1) {
+                if (userGuess === answers[0]) {
+                    verdict.textContent= "Correct!"
+                } else {
+                    verdict.textContent= "Wrong!"
+                }
+            } else if (questionCount === 2) {
+                if (userGuess === answers[1]) {
+                    verdict.textContent= "Correct!"
+                } else {
+                    verdict.textContent= "Wrong!"
+                }
+            } else if (questionCount === 3) {
+                if (userGuess === answers[2]) {
+                    verdict.textContent= "Correct!"
+                } else {
+                    verdict.textContent= "Wrong!"
+                }
+            } else if (questionCount === 4) {
+                if (userGuess === answers[3]) {
+                    verdict.textContent= "Correct!"
+                } else {
+                    verdict.textContent= "Wrong!"
+                }
+            } else if (questionCount === 5) {
+                if (userGuess === answers[4]) {
+                    verdict.textContent= "Correct!"
+                } else {
+                    verdict.textContent= "Wrong!"
+                }
+            }
+        };
+        correct();
+        questionCount++;
+        displayQuestion(questionCount)
+    } 
+})
