@@ -217,9 +217,6 @@ wrong1.addEventListener("click",function(event){
                 } else {
                     verdict.textContent= "Wrong!"
                 }
-            } else {
-                verdict.textContent= " "
-            }
         };
         correct();
         questionCount++;
