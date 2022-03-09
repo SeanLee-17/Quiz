@@ -8,6 +8,7 @@ header {
     height: 35px;
     margin: auto;
     padding: 30px;
+    box-shadow: 2px 3px 3px rgb(114, 114, 114);
 }
 
 header h2 {
@@ -24,11 +25,21 @@ a {
     width: 800px;
     margin: 20px auto;
     border: 10px solid var(--dark);
+    box-shadow: 2px 3px 3px rgb(114, 114, 114);
 }
 
 .questions {
     font-size: 30px;
     margin: 5px;
+    color: var(--dark);
+    text-align: center;
+}
+
+.caption {
+    font-size: 20px;
+    margin: 5px;
+    color: var(--dark);
+    text-align: center;
 }
 
 .button {
@@ -39,4 +50,5 @@ a {
     text-decoration: none;
     padding: 5px 10px;
     font-size: 20px;
+    box-shadow: 2px 2px 2px var(--dark);
 }
