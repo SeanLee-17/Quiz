@@ -9,6 +9,10 @@ HTML
 CSS
 JavaScript
 
+# Links
+https://seanlee-17.github.io/Quiz/
+https://github.com/SeanLee-17/Quiz
+
 # Screenshot
 
 ![alttext](HW4.png)
