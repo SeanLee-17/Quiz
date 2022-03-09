@@ -187,11 +187,12 @@ wrong1.addEventListener("click",function(event){
         var userGuess = event.target.getAttribute("data-wrong1");
         console.log(userGuess);
         function correct() {
-    if (questionCount === 1) {
-            if (userGuess === answers[1]) {
+            if (questionCount === 1) {
+                if (userGuess === answers[1]) {
                     verdict.textContent= "Correct!"
                 } else {
                     verdict.textContent= "Wrong!"
+                    //put time editor
                 }
             } else if (questionCount === 2) {
                 if (userGuess === answers[2]) {
@@ -217,6 +218,7 @@ wrong1.addEventListener("click",function(event){
                 } else {
                     verdict.textContent= "Wrong!"
                 }
+            }
         };
         correct();
         questionCount++;
@@ -234,6 +236,7 @@ wrong2.addEventListener("click",function(event){
                     verdict.textContent= "Correct!"
                 } else {
                     verdict.textContent= "Wrong!"
+                    //put time editor
                 }
             } else if (questionCount === 2) {
                 if (userGuess === answers[2]) {
